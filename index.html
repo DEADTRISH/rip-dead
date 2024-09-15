@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gratitude Website</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Section 1: A Message of Gratitude -->
+        <section id="gratitude">
+            <h1 class="wobbling">wait lemme just play saint pablo first 😳😳 so.. - Thank You for Being there till date but nah ig its the time</h1>
+            <p>To be honest uss din dhani when asked aruu ki aruu bta what problems you have i had to think about mine at that point and yea unlike aruu i did find a few of it jisme se one of the biggest one was me well ive taken a goal till august 2025 till then or maybe even after that i wont have a contact except a hi hello yea ik time lgta isliye aruu chutiya abhi tak gpay pe h connected and no hate to you dhani ily ok? dont think teri vjah se im cutting of its just the problem is me only and pakka ill contact u first even before aruu.</p>
+            <img src="dhani vc.png" alt="cute image" class="cute-image bouncing">
+        </section>
+
+        <!-- Section 2: All the Amazing Things You’ve Done -->
+        <section id="support">
+            <h1 class="wobbling">anyways fuck this farewell thing heres A List of Shits u guys can do</h1>
+            <ul>
+                <li>Pointer one - Aruu tmkc ;-; jk ily more u guys can watch adjustment bureau on netflix its literally the movie i wanted to watch with u two and ekta but nvm god has other plans.</li>
+                <li>Pointer two- dhani u cute af trust me ;-; dont ever think someone is better than u ok?.</li>
+                <li>Pointer three- aruu tere dada kab marenge? nah jk he is the reason we are friends rn he gave u pc so that u can cry online and meet a obese like me (ps u dont have to do your dada ji now ;-; ok?) </li>
+                <li>Pointer four - Dhani ive planned for your radha ji from mathura ;-; so prolly jammu aauga to le aauga if mauka mila to and and i gave u a collaborative link for spotify do join it and prolly add songs ;-; i hate my music taste.</li>
+                <li>Pointer Five - Aruu bhai ;-; tbh you doing good in life but u can do better just think where are u lacking</li>
+            </ul>
+            <img src="dick eater.png" alt="supportive image" class="cute-image bouncing">
+        </section>
+
+        <!-- Section 3: Acknowledging the Tough Times -->
+        <section id="tough-times">
+            <h1 class="wobbling">Even Through the Tough Moments</h1>
+            <p>There was that thin line we didnt break ;-; i mean if its aruu being aruu cutting off for no reason or dhani crying just coz her prank failed there were millions of ups and downs we faced in this trio ;-; i mean the relationship and third wheel but yess all i can mention at last it ily two ❤️</p>
+            <img src="dhani big aruu small.png" alt="tough times image" class="cute-image bouncing">
+        </section>
+
+        <!-- Section 4: A Fun Prank -->
+        <section id="prank">
+            <h1 class="wobbling">HOLLYYY FUCKKKK</h1>
+            <p>Damn look at the boobies</p>
+            <img src="aruu boobs.png" alt="funny image" class="cute-image bouncing">
+        </section>
+        <!-- Section 5: A Fun Prank -->
+        <section id="prank">
+            <h1 class="wobbling">DHANII</h1>
+            <p>BY OCTOBER ill give something to aruu regarding u or maybe directly to you so just be prepared for it</p>
+            <img src="Screenshot 2024-05-01 125942 - Copy.png" alt="funny image" class="cute-image bouncing">
+        </section>
+
+
+    </div>
+
+    <!-- Background fun elements -->
+    <div class="background-shapes">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+        <div class="shape shape4"></div>
+        <div class="star star1"></div>
+        <div class="star star2"></div>
+        <div class="heart heart1"></div>
+        <div class="heart heart2"></div>
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+    </div>
+
+    <audio id="background-music">
+        <source src="saint pablo.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+
+        window.addEventListener('scroll', checkScroll);
+
+        function checkScroll() {
+            const triggerBottom = window.innerHeight / 5 * 4;
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+
+                if (sectionTop < triggerBottom) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+        }
+
+        checkScroll(); // Trigger the scroll effect on page load
+    </script>
+
+    <script>
+        const music = document.getElementById('background-music');
+        music.volume = 1; // Set volume to 100%
+
+        // Play music when the user clicks anywhere on the page
+        document.body.addEventListener('click', () => {
+            if (music.paused) {
+                music.play();
+            }
+        });
+    </script>
+
+</body>
+</html>

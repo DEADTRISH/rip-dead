@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'Comic Sans MS';
+    src: url('Comic\ San\ DY-free.otf') format('otf'),
+         url('ComicNeueSansID.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #000000;
+    overflow-x: hidden;
+    position: relative;
+    font-size: 16px; /* Base font size */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    z-index: 1; /* Keeps content above background */
+    position: relative;
+}
+
+section {
+    padding: 70px 0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h1, h2 {
+    color: #ffc400;
+    font-size: 2.5em; /* Relative font size */
+    text-shadow: 2px 2px #000000;
+}
+
+p, ul {
+    font-size: 1.3em;
+    color: #ff0000;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+li {
+    margin: 10px 0;
+}
+
+.cute-image {
+    width: 150px;
+    margin: 30px auto;
+    display: block;
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+.cute-image:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.bouncing {
+    animation: bounce 2s infinite;
+}
+
+@keyframes wobble {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+}
+
+.wobbling {
+    animation: wobble 1s infinite;
+}
+
+.background-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    animation: float 10s ease-in-out infinite;
+}
+
+.star, .heart, .cloud {
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: float 10s ease-in-out infinite;
+}
+
+.star {
+    width: 118px;
+    height: 65px;
+    background-image: url('dhani phone.png'); /* Star placeholder */
+}
+
+.heart {
+    width: 63.6px;
+    height: 82.5px;
+    background-image: url('aruu bg vc.png'); /* Heart placeholder */
+}
+
+.cloud {
+    width: 149.5px;
+    height: 43.1px;
+    background-image: url('dhani thakur.png'); /* Cloud placeholder */
+}
+
+/* Individual shapes positions and timings */
+.shape1 { width: 150px; height: 150px; top: 5%; left: 10%; animation-duration: 8s; }
+.shape2 { width: 100px; height: 100px; top: 70%; left: 30%; animation-duration: 12s; }
+.shape3 { width: 120px; height: 120px; top: 50%; right: 5%; animation-duration: 15s; }
+.shape4 { width: 80px; height: 80px; bottom: 20%; right: 25%; animation-duration: 10s; }
+.star1 { top: 20%; left: 15%; animation-duration: 15s; }
+.star2 { bottom: 35%; right: 20%; animation-duration: 18s; }
+.heart1 { top: 55%; left: 60%; animation-duration: 14s; }
+.heart2 { bottom: 10%; right: 10%; animation-duration: 20s; }
+.cloud1 { top: 10%; right: 25%; animation-duration: 16s; }
+.cloud2 { bottom: 25%; left: 5%; animation-duration: 22s; }
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 2em; /* Adjust for smaller screens */
+    }
+
+    p, ul {
+        font-size: 1.1em; /* Slightly smaller for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.8em; /* Further adjustment for small screens */
+    }
+
+    p, ul {
+        font-size: 1em; /* Make it readable on small devices */
+    }
+}
